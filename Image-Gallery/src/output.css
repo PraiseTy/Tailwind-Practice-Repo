@@ -542,6 +542,9 @@
   .table {
     display: table;
   }
+  .w-8 {
+    width: calc(var(--spacing) * 8);
+  }
   .border-collapse {
     border-collapse: collapse;
   }
@@ -558,8 +561,14 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .bg-black {
+    background-color: var(--color-black);
+  }
   .bg-pink-500 {
     background-color: var(--color-pink-500);
+  }
+  .text-gray-300 {
+    color: var(--color-gray-300);
   }
   .underline {
     text-decoration-line: underline;
@@ -567,6 +576,20 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .duration-200 {
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+  }
+  .hover\:scale-110 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 110%;
+        --tw-scale-y: 110%;
+        --tw-scale-z: 110%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
   }
 }
 @keyframes spin {
@@ -629,4 +652,23 @@
   syntax: "*";
   inherits: false;
   initial-value: solid;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
 }
