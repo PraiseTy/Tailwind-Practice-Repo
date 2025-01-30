@@ -3,30 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&amp;display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="output.css" />
     <title>Clipboard</title>
+    <style>
+      body {
+        font-family: "Bai JamJuree", sans-serif;
+      }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <section id="hero">
-      <div>
-        <div>
-          <img src="./images/logo.svg" alt="logo" />
+      <div
+        class="bg-[url(./images/bg-header-mobile.png)] bg-contain bg-no-repeat flex flex-col items-center mb-40 pt-32 md:bg-[url(./images/bg-header-desktop.png)]"
+      >
+        <div class="mb-14">
+          <img class="mx-auto my-15" src="./images/logo.svg" alt="logo" />
         </div>
-        <div>
-          <div>A history of everything you copy</div>
-          <p>
+        <div class="w-full flex flex-col items-center">
+          <div
+            class="md:text-5xl md:max-w-full md text-[#4c545d] text-center font-semibold pb-10 text-4xl max-w-sm"
+          >
+            A history of everything you copy
+          </div>
+          <p
+            class="text-2xl leading-[2.25rem] text-[#9fabb2] text-center w-4/5 md:w-3/5 pb-12"
+          >
             Clipboard allows you to track and organize everything you copy.
             Instantly access your clipboard on all your devices.
           </p>
-          <div>
-            <button>Download for iOS</button> <button>Download for Mac</button>
+          <div
+            class="flex flex-col w-full space-x-0 text-center px-8 md:justify-center space-y-6 md:flex-row md:space-x-3 md:space-y-0"
+          >
+            <a
+              href="#"
+              class="p-4 px-8 text-xl rounded-full text-white shadow-xl bg-[#26baa4] duration-200 hover:bg-opacity-80"
+              >Download for iOS</a
+            >
+            <a
+              href="#"
+              class="p-4 px-8 text-xl rounded-full text-white shadow-xl bg-[#6173ff] duration-200 hover:bg-opacity-80"
+              >Download for Mac</a
+            >
           </div>
         </div>
       </div>
     </section>
     <section id="snippets">
-      <div>
+      <div class="">
         <div>Keep track of your snippets</div>
         <p>
           Clipboard instantly stores any item you copy in the cloud, meaning you
