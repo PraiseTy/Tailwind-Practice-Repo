@@ -4,38 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
+    />
     <title>LoopStudios</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <section>
-      <div>
-        <div>
-          <div>loopstudios</div>
-          <div>
-            <div>
+    <section
+      class="w-full bg-[url(./images/mobile/image-hero.jpg)] md:bg-[url(./images/desktop/image-hero.jpg)] bg-cover bg-no-repeat"
+    >
+      <div class="max-w-6xl mx-auto px-6 py-12">
+        <nav class="w-full flex justify-between text-white font-bold">
+          <div><img src="./images/logo.svg" alt="" /></div>
+          <div class="hidden font-alata text-white md:flex space-x-8">
+            <div class="group">
               <a href="#">About</a>
-              <div></div>
+              <div class="group-hover:border-b mx-2 border-blue-50"></div>
             </div>
-            <div>
+            <div class="group">
               <a href="#">Careers</a>
-              <div></div>
+              <div class="group-hover:border-b mx-2 border-blue-50"></div>
             </div>
-            <div>
+            <div class="group">
               <a href="#">Events</a>
-              <div></div>
+              <div class="group-hover:border-b mx-2 border-blue-50"></div>
             </div>
-            <div>
+            <div class="group">
               <a href="#">Products</a>
-              <div></div>
+              <div class="group-hover:border-b mx-2 border-blue-50"></div>
             </div>
-            <div>
+            <div class="group">
               <a href="#">Support</a>
-              <div></div>
+              <div class="group-hover:border-b mx-2 border-blue-50"></div>
             </div>
           </div>
+          <div class="md:hidden">
+            <button>
+              <img src="./images/icon-hamburger.svg" alt="menu-tn" />
+            </button>
+          </div>
+        </nav>
+        <div
+          class="uppercase text-white text-4xl my-32 py-4 font-thin font-josefin md:my-32 max-w-lg md:p-10 border-2 md:text-6xl"
+        >
+          impressive experiences that deliver
         </div>
-        <div>impressive experiences that deliver</div>
       </div>
     </section>
     <section>

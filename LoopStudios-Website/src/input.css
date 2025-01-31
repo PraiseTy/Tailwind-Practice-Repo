@@ -1,1 +1,12 @@
 @import "tailwindcss";
+@import "tailwindcss/preflight";
+
+@layer base {
+  .font-alata {
+    font-family: "Alata", sans-serif;
+  }
+
+  .font-josefin {
+    font-family: "Josefin Sans", sans-serif;
+  }
+}
