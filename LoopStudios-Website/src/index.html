@@ -10,6 +10,11 @@
     />
     <title>LoopStudios</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        box-sizing: border-box;
+      }
+    </style>
   </head>
   <body>
     <section
@@ -54,11 +59,26 @@
       </div>
     </section>
     <section>
-      <div>
-        <div><img src="./images/desktop/image-interactive.jpg" alt="vr" /></div>
-        <div>
-          <h2>the leader in interactive vr</h2>
-          <p>
+      <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row">
+        <img
+          src="./images/mobile/image-interactive.jpg"
+          alt="vr"
+          class="block md:hidden"
+        />
+        <img
+          src="./images/desktop/image-interactive.jpg"
+          alt="vr"
+          class="hidden md:block"
+        />
+        <div
+          class="bg-white pt-10 md:pl-20 md:pt-20 md:ml-[-8rem] flex flex-col justify-end p-0 h-full mt-auto"
+        >
+          <h2
+            class="uppercase font-josefin font-thin text-4xl text-center md:text-left md:text-5xl mb-5"
+          >
+            the leader in interactive vr
+          </h2>
+          <p class="font-josefin text-center md:text-left">
             Founded in 2011, Loopstudios has been producing world-class virtual
             reality projects for some of the best companies around the globe.
             Our award-winning creations have transformed businesses through
@@ -68,91 +88,224 @@
       </div>
     </section>
     <section>
-      <div>
-        <div>
-          <h2>Our creations</h2>
-          <button>see all</button>
+      <div class="max-w-6xl mx-auto px-6 py-12">
+        <div class="flex justify-between items-center mt-10 mb-20">
+          <h2
+            class="text-4xl text-center md:text-5xl md:text-left mx-auto md:mx-0 font-josefin uppercase"
+          >
+            Our creations
+          </h2>
+          <button
+            class="hidden md:block uppercase font-bold font-alata tracking-[4.8px] border-2 border-black px-10 py-2 hover:bg-black hover:text-white duration-100"
+          >
+            see all
+          </button>
         </div>
-        <div>
-          <div>
-            <img src="./images/desktop/image-deep-earth.jpg" alt="#" />
-            <div></div>
-            <p>DEEP EARTH</p>
+        <div class="grid grid-rows-1 md:grid-cols-4 gap-8 text-white">
+          <div class="relative item group overflow-hidden">
+            <img
+              src="./images/desktop/image-deep-earth.jpg"
+              alt="#"
+              class="hidden w-full duration-200 md:block group-hover:scale-110 group-hover:opacity-60"
+            />
+
+            <img
+              src="./images/mobile/image-deep-earth.jpg"
+              alt="#"
+              class="md:hidden"
+            />
+            <div
+              class="absolute bg-gradient-to-b from-transparent to-[#111827]"
+            ></div>
+            <p
+              class="absolute bottom-[1rem] px-6 md:bottom-[2rem] text-2xl font-thin w-44 group-hover:text-black group-hover:scale-110 duration-200"
+            >
+              DEEP EARTH
+            </p>
           </div>
-          <div>
-            <img src="./images/desktop/image-night-arcade.jpg" alt="#" />
-            <div></div>
-            <p>NIGHT ARCADE</p>
+          <div class="relative item group overflow-hidden">
+            <img
+              src="./images/desktop/image-night-arcade.jpg"
+              alt="#"
+              class="hidden w-full duration-200 md:block group-hover:scale-110 group-hover:opacity-60"
+            />
+            <img
+              src="./images/mobile/image-night-arcade.jpg"
+              alt="#"
+              class="md:hidden"
+            />
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70 z-10"
+            ></div>
+            <p
+              class="absolute bottom-[1rem] px-6 md:bottom-[2rem] text-2xl font-thin w-44 group-hover:text-black group-hover:scale-100 duration-200"
+            >
+              NIGHT ARCADE
+            </p>
           </div>
-          <div>
-            <img src="./images/desktop/image-soccer-team.jpg" alt="#" />
+          <div class="relative group item overflow-hidden">
+            <img
+              src="./images/desktop/image-soccer-team.jpg"
+              alt="#"
+              class="hidden w-full duration-200 md:block group-hover:scale-110 group-hover:opacity-60"
+            />
+
+            <img
+              src="./images/mobile/image-soccer-team.jpg"
+              alt="#"
+              class="md:hidden"
+            />
             <div></div>
-            <p>SOCCER TEAM VR</p>
+            <p
+              class="absolute bottom-[1rem] w-44 px-6 md:bottom-[2rem] text-2xl font-thin group-hover:text-black group-hover:scale-110 duration-200"
+            >
+              SOCCER TEAM VR
+            </p>
           </div>
-          <div>
-            <img src="./images/desktop/image-grid.jpg" alt="#" />
+          <div class="relative group item overflow-hidden:">
+            <img
+              src="./images/desktop/image-grid.jpg"
+              alt="#"
+              class="hidden w-full duration-200 md:block group-hover:scale-110 group-hover:opacity-60"
+            />
+
+            <img
+              src="./images/mobile/image-grid.jpg"
+              alt="#"
+              class="md:hidden"
+            />
             <div></div>
-            <p>THE GRID</p>
+            <p
+              class="absolute bottom-[1rem] w-44 px-6 md:bottom-[2rem] text-2xl font-thin group-hover:text-black group-hover:scale-110 duration-200"
+            >
+              THE GRID
+            </p>
           </div>
-          <div>
-            <img src="./images/desktop/image-from-above.jpg" alt="#" />
+          <div class="relative group item overflow-hidden:">
+            <img
+              src="./images/desktop/image-from-above.jpg"
+              alt="#"
+              class="hidden w-full duration-200 md:block group-hover:scale-110 group-hover:opacity-60"
+            />
+
+            <img
+              src="./images/mobile/image-from-above.jpg"
+              alt="#"
+              class="md:hidden"
+            />
             <div></div>
-            <p>FROM UP ABOVE VR</p>
+            <p
+              class="absolute bottom-[1rem] w-44 px-6 md:bottom-[2rem] text-2xl font-thin group-hover:text-black group-hover:scale-110 duration-200"
+            >
+              FROM UP ABOVE VR
+            </p>
           </div>
-          <div>
-            <img src="./images/desktop/image-pocket-borealis.jpg" alt="#" />
+          <div class="relative group item overflow-hidden">
+            <img
+              src="./images/desktop/image-pocket-borealis.jpg"
+              alt="#"
+              class="hidden w-full duration-200 md:block group-hover:scale-110 group-hover:opacity-60"
+            />
+
+            <img
+              src="./images/mobile/image-pocket-borealis.jpg"
+              alt="#"
+              class="md:hidden"
+            />
             <div></div>
-            <p>POCKET BOREALIS</p>
+            <p
+              class="absolute bottom-[1rem] w-44 px-6 md:bottom-[2rem] text-2xl font-thin duration-200 group-hover:text-black group-hover:scale-110"
+            >
+              POCKET BOREALIS
+            </p>
           </div>
-          <div>
-            <img src="./images/desktop/image-curiosity.jpg" alt="#" />
+          <div class="relative group item overflow-hidden">
+            <img
+              src="./images/desktop/image-curiosity.jpg"
+              alt="#"
+              class="hidden md:block w-full duration-200 group-hover:scale-110 group-hover:opacity-60"
+            />
+
+            <img
+              src="./images/mobile/image-curiosity.jpg"
+              alt="#"
+              class="md:hidden"
+            />
             <div></div>
-            <p>THE CURIOSITY</p>
+            <p
+              class="absolute bottom-[1rem] w-44 px-6 md:bottom-[2rem] text-2xl font-thin group-hover:text-black group-hover:scale-110 duration-200"
+            >
+              THE CURIOSITY
+            </p>
           </div>
-          <div>
-            <img src="./images/desktop/image-fisheye.jpg" alt="#" />
+          <div class="relative group item overflow-hidden">
+            <img
+              src="./images/desktop/image-fisheye.jpg"
+              alt="#"
+              class="hidden md:block w-full group-hover:opacity-60 group-hover:scale-110 duration-200"
+            />
+
+            <img
+              src="./images/mobile/image-fisheye.jpg"
+              alt="#"
+              class="md:hidden"
+            />
             <div></div>
-            <p>MAKE IT FISHEYE</p>
+            <p
+              class="absolute bottom-[1rem] w-44 px-6 md:bottom-[2rem] text-2xl font-thin group-hover:text-black group-hover:scale-110 duration-200"
+            >
+              MAKE IT FISHEYE
+            </p>
           </div>
         </div>
       </div>
     </section>
     <footer>
-      <div>
-        <div>
-          <h2>loopstudios</h2>
-          <div>
-            <div>
+      <div
+        class="bg-black text-white flex md:justify-between md:md:pt-10 md:px-20 md:pb-20 flex-col md:flex-row py-10"
+      >
+        <div
+          class="space-y-0 space-x-8 md:space-y-5 md:space-x-0 flex flex-col items-center md:items-start pb-8 md:pb-0"
+        >
+          <img src="./images/logo.svg" alt="logo" />
+          <div
+            class="flex flex-col space-x-0 space-y-8 pt-8 text-center md:text-left md:flex-row md:pt-0 md:space-y-0 md:space-x-6"
+          >
+            <div class="group">
               <a href="#">About</a>
-              <div></div>
+              <div class="group-hover:border-b mx-2 border-blue-50"></div>
             </div>
-            <div>
+            <div class="group">
               <a href="#">Careers</a>
-              <div></div>
+              <div class="group-hover:border-b mx-2 border-blue-50"></div>
             </div>
-            <div>
+            <div class="group">
               <a href="#">Events</a>
-              <div></div>
+              <div class="group-hover:border-b mx-2 border-blue-50"></div>
             </div>
-            <div>
+            <div class="group">
               <a href="#">Products</a>
-              <div></div>
+              <div class="group-hover:border-b mx-2 border-blue-50"></div>
             </div>
-            <div>
+            <div class="group">
               <a href="#">Support</a>
-              <div></div>
+              <div class="group-hover:border-b mx-2 border-blue-50"></div>
             </div>
           </div>
         </div>
-        <div>
-          <div>
+        <div class="space-y-5">
+          <div
+            class="flex flex-row space-x-4 justify-center md:justify-start pb-2"
+          >
             <img src="./images/icon-facebook.svg" alt="facebook" />
             <img src="./images/icon-twitter.svg" alt="twitter" />
             <img src="./images/icon-pinterest.svg" alt="pinterest" />
             <img src="./images/icon-instagram.svg" alt="instagram" />
           </div>
-          <div>
-            <h2>© 2022 Loopstudios. All Rights Reserved</h2>
+          <div class="text-center">
+            <h2 class="text-gray-500">
+              © 2022 Loopstudios. All Rights Reserved
+            </h2>
           </div>
         </div>
       </div>
