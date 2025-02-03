@@ -552,6 +552,9 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .bg-\[\#7ce4e4\] {
+    background-color: #7ce4e4;
+  }
   .bg-\[darkPurple\] {
     background-color: darkPurple;
   }
@@ -564,6 +567,12 @@
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-\[\#7ce4e4\] {
+    color: #7ce4e4;
+  }
+  .text-\[\#f46262\] {
+    color: #f46262;
   }
   .text-cyan-500 {
     color: var(--color-cyan-500);
