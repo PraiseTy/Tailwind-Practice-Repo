@@ -1,1 +1,34 @@
 @import "tailwindcss";
+@import "tailwindcss/preflight";
+
+@layer base {
+  .font-alata {
+    font-family: "Alata", sans-serif;
+  }
+
+  .font-poppins {
+    font-family: "Poppins", sans-serif;
+  }
+  /* .darkPurple {
+    color: "dark-purple": "#3b3054","
+  }
+  colors: {
+    "dark-purple": "#3b3054",
+    "bg-white": "#ffffff",
+    "bg-cyan": "#2acfcf",
+    "bg-black": "#000000",
+    "bg-gray": "#f3f4f6",
+    "grayish-violet": "#9e9aa7",
+  } */
+}
+
+/* @layer base {
+    color {
+        "darkPurple": "#3b3054",
+        "white": "#ffffff",
+        "cyan": "#2acfcf",
+        "black": "#000000",
+        "gray": "#f3f4f6",
+        "grayish-violet": "#9e9aa7",
+    }
+} */
