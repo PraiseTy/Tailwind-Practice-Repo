@@ -44,7 +44,7 @@
       </div>
     </nav>
     <section>
-      <div class="mx-auto p-6 max-w-5xl flex flex-col md:flex-row">
+      <div class="mx-auto p-6 max-w-5xl flex flex-col md:flex-row mb-20">
         <div
           class="space-y-6 md:w-1/2 lg:mt-12 order-2 md:order-1 flex flex-col items-center md:items-start"
         >
@@ -68,32 +68,95 @@
         </div>
       </div>
     </section>
-    <section>
-      <div>
-        <div>
-          <input type="text" placeholder="Shorten a link here" />
-          <button>Shorten It!</button>
-        </div>
-        <div>
-          <div>
-            <p>https://frontendmentor.io</p>
-            <div>
-              <p>https://rel.ink/k4IKyk</p>
-              <button>Copy</button>
+    <section class="bg-[#f3f4f6]">
+      <div
+        class="mx-auto p-6 flex flex-col justify-center items-center max-w-4xl"
+      >
+        <form
+          id="link-form"
+          class="relative flex flex-col w-9/12 p-6 -mt-20 space-y-4 bg-[#3b3054] rounded-lg md:flex-row md:space-y-0 md:space-x-3"
+        >
+          <input
+            type="text"
+            class="flex-1 pl-3 border-2 rounded-lg bg-white placeholder-yellow-500 focus:outline-none text-sm"
+            placeholder="Shorten a link here"
+            id="link-input"
+          />
+
+          <button
+            class="px-10 py-3 text-white font-poppins bg-[#2acfcf] rounded-lg hover:bg-cyanLight focus:outline-none md:py-2 md:px-6 text-sm"
+          >
+            Shorten It!
+          </button>
+
+          <!-- Error Message -->
+          <div
+            id="err-msg"
+            class="absolute left-7 bottom-3 text-red text-sm italic"
+          ></div>
+        </form>
+        <div class="max-w-4xl mx-auto p-6 flex flex-col">
+          <div
+            class="flex flex-col items-center justify-between w-full p-6 bg-white rounded-lg md:flex-row mb-5"
+          >
+            <p
+              class="font-bold text-center text-[#232127] pr-[6.5rem] text-sm md:text-left"
+            >
+              https://frontendmentor.io
+            </p>
+            <div
+              class="flex flex-col items-center justify-end flex-1 space-x-4 space-y-2 md:flex-row md:space-y-0"
+            >
+              <p class="text-[#2acfcf] font-poppins font-bold text-sm">
+                https://rel.ink/k4IKyk
+              </p>
+              <button
+                class="bg-[#2acfcf] text-white font-poppins text-sm px-5 py-1 rounded-md"
+              >
+                Copy
+              </button>
             </div>
           </div>
-          <div>
-            <p>https://twitter.com/frontendmentor</p>
-            <div>
-              <p>https://rel.ink/gxOXp9</p>
-              <button>Copy</button>
+          <div
+            class="flex flex-col items-center justify-between w-full p-6 bg-white rounded-lg md:flex-row mb-5"
+          >
+            <p
+              class="font-bold text-center text-[#232127] pr-[5.5rem] text-sm md:text-left"
+            >
+              https://twitter.com/frontendmentor
+            </p>
+            <div
+              class="flex flex-col items-center justify-end flex-1 space-x-4 space-y-2 md:flex-row md:space-y-0"
+            >
+              <p class="text-[#2acfcf] font-poppins font-bold text-sm">
+                https://rel.ink/gxOXp9
+              </p>
+              <button
+                class="bg-[#35323e] text-white font-poppins text-sm px-5 py-1 rounded-md"
+              >
+                Copy
+              </button>
             </div>
           </div>
-          <div>
-            <p>https://linkedin.com/frontend-mentor</p>
-            <div>
-              <p>https://rel.ink/gob3X9</p>
-              <button>Copy</button>
+          <div
+            class="flex flex-col items-center justify-between w-full p-6 bg-white rounded-lg md:flex-row mb-5"
+          >
+            <p
+              class="font-bold text-center text-[#232127] pr-[6.5rem] text-sm md:text-left"
+            >
+              https://linkedin.com/frontend-mentor
+            </p>
+            <div
+              class="flex flex-col items-center justify-end flex-1 space-x-4 space-y-2 md:flex-row md:space-y-0"
+            >
+              <p class="text-[#2acfcf] font-poppins font-bold text-sm">
+                https://rel.ink/gob3X9
+              </p>
+              <button
+                class="bg-[#2acfcf] text-white font-poppins text-sm px-5 py-1 rounded-md"
+              >
+                Copy
+              </button>
             </div>
           </div>
         </div>
