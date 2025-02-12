@@ -96,3 +96,8 @@
 .multi-bg-desktop {
   background-image: url("../images/bg-boost-desktop.svg");
 }
+
+.ficon:hover {
+  filter: invert(79%) sepia(61%) saturate(464%) hue-rotate(130deg)
+    brightness(89%) contrast(85%);
+}
