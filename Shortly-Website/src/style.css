@@ -92,3 +92,7 @@
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }
+
+.multi-bg-desktop {
+  background-image: url("../images/bg-boost-desktop.svg");
+}
