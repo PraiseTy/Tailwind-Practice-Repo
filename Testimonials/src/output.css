@@ -673,11 +673,17 @@
   .bg-gray-600 {
     background-color: var(--color-gray-600);
   }
+  .bg-gray-900 {
+    background-color: var(--color-gray-900);
+  }
   .bg-pink-600 {
     background-color: var(--color-pink-600);
   }
   .bg-purple-700 {
     background-color: var(--color-purple-700);
+  }
+  .bg-white {
+    background-color: var(--color-white);
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
@@ -692,6 +698,12 @@
   .text-xl {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .text-black {
+    color: var(--color-black);
+  }
+  .text-gray-900 {
+    color: var(--color-gray-900);
   }
   .text-white {
     color: var(--color-white);
@@ -745,6 +757,11 @@
   .md\:col-span-2 {
     @media (width >= 48rem) {
       grid-column: span 2 / span 2;
+    }
+  }
+  .md\:block {
+    @media (width >= 48rem) {
+      display: block;
     }
   }
   .md\:hidden {
