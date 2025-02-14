@@ -31,3 +31,7 @@
     max-width: 1536px;
   }
 }
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
