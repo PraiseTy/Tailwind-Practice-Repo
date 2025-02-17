@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
     <title>Fylo</title>
     <script>
       if (
@@ -18,10 +24,10 @@
 
     <link rel="stylesheet" href="./css/output.css" />
   </head>
-  <body class="dark:bg-darkBlue dark:text-white font-opensans">
-    <header class="w-full mx-auto flex mt-10 px-6 text-center h-40 md:h-20">
+  <body class="m-0 dark:bg-darkBlue dark:text-white font-opensans">
+    <header class="container mx-auto mt-10 px-6 h-40 md:h-20">
       <div
-        class="bg-logo-light-mode dark:bg-logo-light-mode bg-no-repeat h-20 w-48 mx-auto md:mx-0 md:absolute top-10 left-10"
+        class="bg-logo-light-mode dark:bg-logo-dark-mode bg-no-repeat h-20 w-48 mx-auto md:mx-0 md:absolute top-10 left-10"
       ></div>
       <div
         class="flex items-center justify-center space-x-4 md:space-x-10 md:absolute top-12 right-10"
@@ -68,6 +74,26 @@
         </button>
       </div>
     </header>
+    <section
+      class="bg-curvy-light-mode dark:bg-curvy-dark-mode bg-no-repeat bg-contain bg-bottom"
+    >
+      <div class="container mx-auto px-6 text-center md:pt-20 pb-52">
+        <img src="./images/illustration-intro.png" alt="" />
+        <h1
+          class="max-w-2xl mx-auto mb-10 text-3xl font-bold leading-normal mt-14 md:text-4xl"
+        >
+          All your files in one secure location, assessible anywhere.
+        </h1>
+        <p class="max-w-sm mx-auto mb-10 text-sm md:max-w-xl md:text-lg">
+          Fylo stores all your most important files in one secure location.
+          Access them wherever you need, share and collaborate with friends
+          family, and co-workers.
+        </p>
+        <button class="p-3 bg-accentCyan rounded-full w-52 hover:scale-95">
+          Get Started
+        </button>
+      </div>
+    </section>
     <script src="js/script.js"></script>
   </body>
 </html>
