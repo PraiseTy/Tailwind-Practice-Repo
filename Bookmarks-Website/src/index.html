@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="font-sans">
+  <body class="font-sans overflow-x-hidden">
     <nav class="container relative mx-auto p-6">
       <div class="flex justify-between pt-10">
         <div class="w-full">
@@ -38,13 +38,51 @@
           <span></span>
         </button>
       </div>
-      <div class="md:hidden block">
+      <div class="md:hidden hidden">
         <div>FEATURES</div>
         <div>DOWNLOAD</div>
         <div>FAQ</div>
         <div>LOGIN</div>
       </div>
     </nav>
+    <section>
+      <div
+        class="container flex flex-col-reverse mx-auto p-6 lg:flex-row lg:mb-0 lg:text-left text-center"
+      >
+        <div class="flex flex-col space-y-10 lg:mt-16 lg:w-1/2">
+          <h1 class="text-3xl md:text-6xl font-semibold max-w-xl">
+            A Simple Bookmark Manager
+          </h1>
+          <p class="text-grayishBlue lg:text-2xl max-w-md text-lg">
+            A clean and simple interface to organize your favourite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
+          <div class="flex space-x-4 justify-center lg:justify-start">
+            <button
+              class="bg-softBlue text-white p-4 font-semibold rounded-md border border-2 hover:border-softBlue hover:bg-white hover:text-softBlue"
+            >
+              Get it on Chrome</button
+            ><button
+              class="bg-gray-300 p-4 font-semibold rounded-md border border-2 border-gray-300 hover:bg-white hover:text-gray-600"
+            >
+              Get it on Firefox
+            </button>
+          </div>
+        </div>
+        <div class="relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2">
+          <div
+            class="bg-hero w-[2000px] h-[300px] absolute left-[30%] top-[13rem] rounded-tl-[9999px] rounded-bl-[9999px] bg-softBlue md:w-[2000px] md:h-[300px] md:left-[30%] md:top-[13rem] hidden md:block"
+          ></div>
+
+          <img
+            src="./images/illustration-hero.svg"
+            alt="computer"
+            class="relative z-10 lg:top-24 xl:top-0 overflow-x-visible"
+          />
+        </div>
+      </div>
+    </section>
     <script src="./js/app.js"></script>
   </body>
 </html>
