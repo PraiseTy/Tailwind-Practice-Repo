@@ -1,1 +1,40 @@
 @import "tailwindcss";
+
+/* @theme {
+      screens: {
+        sm: '480px',
+        md: '768px',
+        lg: '1020px',
+        xl: '1440px',
+      }
+
+        colors: {
+          softBlue: 'hsl(231, 69%, 60%)',
+          softRed: 'hsl(0, 94%, 66%)',
+          grayishBlue: 'hsl(229, 8%, 60%)',
+          veryDarkBlue: 'hsl(229, 31%, 21%)',
+        },
+        fontFamily: {
+          sans: ['Rubik', 'sans-serif'],
+        },
+        backgroundImage: {
+          dots: "url('../images/bg-dots.svg')",
+        },
+      },
+    }   */
+
+@theme {
+  --font-sans: "Rubik", sans-serif;
+
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1020px;
+  --breakpoint-xl: 1440px;
+
+  --color-softBlue: hsl(231, 69%, 60%);
+  --color-softRed: hsl(0, 94%, 66%);
+  --color-grayishBlue: hsl(229, 8%, 60%);
+  --color-veryDarkBlue: hsl(229, 31%, 21%);
+
+  --background-dots: url("../images/bg-dots.svg");
+}
