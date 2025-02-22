@@ -387,6 +387,10 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
+  .border-none {
+    --tw-border-style: none;
+    border-style: none;
+  }
   .border-gray-300 {
     border-color: var(--color-gray-300);
   }
@@ -627,6 +631,22 @@
   .md\:flex-row {
     @media (width >= 768px) {
       flex-direction: row;
+    }
+  }
+  .md\:border-b {
+    @media (width >= 768px) {
+      border-bottom-style: var(--tw-border-style);
+      border-bottom-width: 1px;
+    }
+  }
+  .md\:border-gray-300 {
+    @media (width >= 768px) {
+      border-color: var(--color-gray-300);
+    }
+  }
+  .md\:py-0 {
+    @media (width >= 768px) {
+      padding-block: calc(var(--spacing) * 0);
     }
   }
   .md\:text-6xl {
