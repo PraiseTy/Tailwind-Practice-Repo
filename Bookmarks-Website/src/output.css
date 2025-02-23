@@ -304,6 +304,9 @@
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
+  .cursor-pointer {
+    cursor: pointer;
+  }
   .resize {
     resize: both;
   }
@@ -390,12 +393,30 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
+  .border-4 {
+    border-style: var(--tw-border-style);
+    border-width: 4px;
+  }
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
+  .border-b-2 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
+  }
+  .border-b-4 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 4px;
+  }
   .border-gray-300 {
     border-color: var(--color-gray-300);
+  }
+  .border-softRed {
+    border-color: var(--color-softRed);
+  }
+  .border-b-softRed {
+    border-bottom-color: var(--color-softRed);
   }
   .bg-gray-300 {
     background-color: var(--color-gray-300);
@@ -627,15 +648,52 @@
       border-bottom-width: 0px;
     }
   }
+  .md\:border-b-2 {
+    @media (width >= 768px) {
+      border-bottom-style: var(--tw-border-style);
+      border-bottom-width: 2px;
+    }
+  }
+  .md\:border-b-4 {
+    @media (width >= 768px) {
+      border-bottom-style: var(--tw-border-style);
+      border-bottom-width: 4px;
+    }
+  }
   .md\:border-none {
     @media (width >= 768px) {
       --tw-border-style: none;
       border-style: none;
     }
   }
+  .md\:border-gray-300 {
+    @media (width >= 768px) {
+      border-color: var(--color-gray-300);
+    }
+  }
+  .md\:border-softRed {
+    @media (width >= 768px) {
+      border-color: var(--color-softRed);
+    }
+  }
   .md\:py-0 {
     @media (width >= 768px) {
       padding-block: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:py-5 {
+    @media (width >= 768px) {
+      padding-block: calc(var(--spacing) * 5);
+    }
+  }
+  .md\:pb-2 {
+    @media (width >= 768px) {
+      padding-bottom: calc(var(--spacing) * 2);
+    }
+  }
+  .md\:pb-5 {
+    @media (width >= 768px) {
+      padding-bottom: calc(var(--spacing) * 5);
     }
   }
   .md\:text-left {

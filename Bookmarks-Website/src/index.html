@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BooksMark</title>
+    <title>BookMark</title>
     <link rel="stylesheet" href="./output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -97,27 +97,33 @@
       <div class="container mx-auto mb-32 mt-16 px-6">
         <div></div>
         <div
-          class="flex flex-col md:flex-row md:space-x-14 items-center text-gray-600 md:border-b md:w-fit max-w-full mx-auto px-2 md: border-gray-300 py-5 border-b-none"
+          class="flex flex-col md:flex-row md:space-x-14 items-center cursor-pointer text-gray-600 md:border-b md:w-fit max-w-full mx-auto px-2 md:border-gray-300 py-5 border-b-none"
         >
           <div
-            class="md:border-b-0 border-b border-gray-300 md:w-fit w-full text-center"
+            class="md:border-b-0 border-b border-gray-300 md:w-fit w-full text-center tab-button"
+            data-tab="1"
           >
             <div class="hover:text-softRed md:py-0 py-5">
               Simple Bookmarking
             </div>
           </div>
           <div
-            class="md:border-b-0 border-b border-gray-300 md:w-fit w-full text-center"
+            class="md:border-b-0 border-b border-gray-300 md:w-fit w-full text-center tab-button"
+            data-tab="2"
           >
             <div class="hover:text-softRed md:py-0 py-5">Speedy Searching</div>
           </div>
           <div
-            class="md:border-b-0 border-b border-gray-300 md:w-fit w-full text-center"
+            class="md:border-b-0 border-b border-gray-300 md:w-fit w-full text-center tab-button"
+            data-tab="3"
           >
             <div class="hover:text-softRed md:py-0 py-5">Easy Sharing</div>
           </div>
         </div>
-        <div class="flex flex-col md:flex-row mt-10 md:space-x-7">
+        <div
+          class="hidden flex-col md:flex-row mt-10 md:space-x-7 tab-panel"
+          data-panel="1"
+        >
           <div class="flex justify-center md:w-1/2">
             <img
               src="./images/illustration-features-tab-1.svg"
@@ -143,7 +149,10 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-col md:flex-row mt-10 md:space-x-7">
+        <div
+          class="hidden flex-col md:flex-row mt-10 md:space-x-7 tab-panel"
+          data-panel="2"
+        >
           <div class="flex justify-center md:w-1/2">
             <img
               src="./images/illustration-features-tab-2.svg"
@@ -168,7 +177,10 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-col md:flex-row mt-10 md:space-x-7">
+        <div
+          class="hidden flex-col md:flex-row mt-10 md:space-x-7 tab-panel"
+          data-panel="3"
+        >
           <div class="flex justify-center md:w-1/2">
             <img
               src="./images/illustration-features-tab-3.svg"
