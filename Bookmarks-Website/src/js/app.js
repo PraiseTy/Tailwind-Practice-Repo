@@ -27,3 +27,36 @@ tabsButton.forEach((element) => {
     getPanel.classList.add("flex");
   });
 });
+
+function ToggleBtn() {
+  const questions = document.querySelectorAll(".question");
+  const answers = document.querySelectorAll(".answer");
+  questions.forEach((element) => {
+    element.addEventListener("click", () => {
+      const arrow = element.parentElement.querySelector("img");
+      const answer = element.parentElement.querySelector(".answer");
+
+      document.querySelectorAll(".question img").forEach((img) => {
+        if (img !== arrow) {
+          img.classList.remove("rotate-180", "softred");
+        }
+      });
+
+      answers.forEach((elementPanel) => {
+        elementPanel.classList.remove("max-h-0", "max-h-[200px]", "block");
+
+        if (answer !== elementPanel) {
+          elementPanel.classList.add("hidden", "max-h-0");
+
+          return;
+        }
+      });
+      answer.classList.remove("max-h-0", "hidden");
+      answer.classList.add("max-h-[200px]", "pb-3");
+      arrow.classList.add("rotate-180");
+      arrow.classList.toggle("softred");
+    });
+  });
+}
+
+ToggleBtn();
