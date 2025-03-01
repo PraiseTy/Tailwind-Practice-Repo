@@ -1,4 +1,4 @@
-import { Navbar, Search } from '@/components';
+import { Navbar, Search, Country } from '@/components';
 
 
 export default function Home() {
@@ -6,6 +6,7 @@ export default function Home() {
     <div>
       <Navbar />
       <Search />
+      <Country />
     </div>
   );
 }
