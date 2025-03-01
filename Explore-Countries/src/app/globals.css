@@ -18,14 +18,17 @@
     --color-bg-color: #202c37;
     --color-elementColor: #ffffff;
     --color-text-color:#ffffff;
-    --color-input-color:	#858585
+    --color-input-color:	#858585;
+    --color-navColor: #2b3945;
 }
 
 :root[data-theme='light'] {
     --color-bg-color: #fafafa;
     --color-elementColor: #2b3945;
     --color-text-color:	#111517;
-    --color-input-color:	#858585
+    --color-input-color:	#858585;
+    --color-navColor: #ffffff;
+
 }
 
 
