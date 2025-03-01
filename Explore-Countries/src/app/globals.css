@@ -1,24 +1,36 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 @theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --breakpoint-mobile: 23rem;
+    --breakpoint-desktop: 90rem;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --color-bg-color: #fafafa;
+    --color-elementColor: #2b3945;
+    --color-text-color:	#111517;
+    --color-input-color:	#858585
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+:root[data-theme='dark'] {
+    --color-bg-color: #202c37;
+    --color-elementColor: #ffffff;
+    --color-text-color:#ffffff;
+    --color-input-color:	#858585
 }
+
+:root[data-theme='light'] {
+    --color-bg-color: #fafafa;
+    --color-elementColor: #2b3945;
+    --color-text-color:	#111517;
+    --color-input-color:	#858585
+}
+
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-text-color);
+  background: var(--color-bg-color);
+  font-family: Nunito Sans, serif;
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { ThemeProvider } from '@/provider/ThemeContext';
+import React from 'react';
 
 
 export const metadata: Metadata = {
@@ -8,19 +9,15 @@ export const metadata: Metadata = {
   description: 'Learn more about your favorite countries'
 };
 
-export default function RootLayout({
-                                     children
-                                   }: Readonly<{
-  children: React.ReactNode;
-}>) {
+const Layout = ({ children }: Readonly<{ children: React.ReactNode; }>) => {
   return (
     <html lang="en">
     <ThemeProvider>
-      <body
-      >
+      <body>
       {children}
       </body>
     </ThemeProvider>
     </html>
   );
-}
+};
+export default Layout;

@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import React, { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 
 interface ThemeContextProps {
   isDarkMode: boolean;
@@ -14,7 +14,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme');
-    if (storedTheme === 'dark') {
+    if (storedTheme) {
       setIsDarkMode(storedTheme === 'dark');
     } else {
       setIsDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
