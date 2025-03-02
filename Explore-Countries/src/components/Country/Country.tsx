@@ -2,11 +2,22 @@ import React from 'react';
 import { countryData } from '@/components/Country/CountryData';
 import Image from 'next/image';
 
-const Country = () => {
+interface CountryProps {
+  selectedRegion: string;
+  selectedQuery: string;
+}
+
+const Country = ({ selectedRegion, selectedQuery }: CountryProps) => {
+  const filteredCountry = countryData.filter(country => {
+    return (
+      (selectedRegion ? country.region === selectedRegion : true) && (selectedQuery ? country.name.toLowerCase().includes(selectedQuery) : true)
+    );
+  });
   return (
     <div className="container mx-auto mt-20">
-      <div className="grid grid-cols-4 max-sm:grid-cols-1 gap-30 md:gap-auto w-[1500px] max-sm:w-[400px] px-8 max-sm:px-20">
-        {countryData.map((country, index) => (
+      <div
+        className="grid grid-cols-4 max-sm:grid-cols-1 gap-30 md:gap-auto w-[1500px] max-sm:w-[400px] px-8 max-sm:px-20">
+        {filteredCountry.map((country, index) => (
           <div className="bg-[var(--color-navColor)] mb-2 rounded-lg pb-10  ">
             {country.flags?.svg ? (
               <Image
@@ -19,12 +30,12 @@ const Country = () => {
             ) : (
               <p>No flag available</p>
             )}
-            <div className='space-y-5 mx-auto'>
-              <h1 className='mt-4 text-3xl max-sm:text-md pl-8 font-bold'>{country.name}</h1>
-              <div key={country.alpha3Code || index} className='pl-8'>
-                <p>Population: {country.population}</p>
-                <p>Region: {country.region}</p>
-                <p>Capital: {country.capital}</p>
+            <div className="space-y-5 mx-auto">
+              <h1 className="mt-4 text-3xl max-sm:text-md pl-8 font-bold">{country.name}</h1>
+              <div key={country.alpha3Code || index} className="pl-8">
+                <p> <span className='font-semibold'>Population</span>: {country.population}</p>
+                <p> <span className='font-semibold'>Region</span>: {country.region}</p>
+                <p><span className='font-semibold'> Capital</span>: {country.capital}</p>
               </div>
             </div>
           </div>
