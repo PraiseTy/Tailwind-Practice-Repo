@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { ThemeProvider } from '@/provider/ThemeContext';
 import React from 'react';
+import { Navbar } from '@/components';
 
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ const Layout = ({ children }: Readonly<{ children: React.ReactNode; }>) => {
     <html lang="en">
     <ThemeProvider>
       <body>
+      <Navbar />
       {children}
       </body>
     </ThemeProvider>

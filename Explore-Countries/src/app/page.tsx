@@ -9,7 +9,6 @@ export default function Home() {
 
   return (
     <div>
-      <Navbar  />
       <Search setSelectedRegion={setSelectedRegion}  setSelectedQuery={setSelectedQuery} />
       <Country selectedRegion={selectedRegion}  selectedQuery={selectedQuery} />
     </div>
