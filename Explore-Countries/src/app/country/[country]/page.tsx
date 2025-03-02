@@ -20,15 +20,14 @@ const CountryPage = ({ params }: CountryDetailsProps) => {
 
   return (
     <div className="mt-10 container mx-auto ">
-      <div onClick={() => router.back()}
+      <div onClick={() => router.push('/')}
            className="flex space-x-2 w-fit bg-[var(--color-navColor)]  rounded-sm px-6 py-1 cursor-pointer mb-10 shadow-2xl max-sm:ml-9 ">
         <Image src="/move-left.svg" alt="back-arrow" width={20} height={30} className={isDarkMode ? 'invert' : ''} />
         <p>Back</p>
       </div>
-      <div className="flex flex-row max-sm:flex-col ">
+      <div className="flex flex-row max-sm:flex-col">
         <div className="flex-1">
           {country.flags?.svg ?
-
             <div className="w-[550px] h-[350px] max-sm:w-[300px] max-sm:h-[200px] max-sm:mx-auto object-contain overflow-hidden">
               <div className=" max-sm:mx-auto">
                 <Image src={country.flags.svg} alt="flag" layout="intrinsic" width={500} height={200}
