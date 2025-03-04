@@ -7,6 +7,96 @@
     font-weight: 400;
 }
 
+@theme {
+    --color-neutral-white: #ffffff;
+    --color-neutral-light: #d2d1d6;
+    --color-neutral-medium: #8784a4;
+    --color-neutral-dark: #4b486a;
+    --color-neutral-black: #0c082b;
+    --color-orange-primary: #f57261;
+    --color-orange-dark: #e16151;
+}
+
+/*body{*/
+/*    background-image: url("/background-desktop.png");*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*    min-height: 100vh; !* Ensures the background covers the full height *!*/
+/*}*/
+
+@media (max-width: 376px) {
+    body {
+        background-image: url("/background-mobile.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        background-image: url("/pattern-lines.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        pointer-events: none;
+
+        /* Apply a gradient overlay to fade out */
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        background-image: url("/background-desktop.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        background-image: url("/pattern-lines.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        pointer-events: none;
+
+        /* Apply a gradient overlay to fade out */
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    }
+}
+
+@media (min-width: 376px) and (max-width: 1440px) {
+    body {
+        background-image: url("/background-tablet.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        background-image: url("/pattern-lines.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        pointer-events: none;
+
+        /* Apply a gradient overlay to fade out */
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    }
+}
 /*  color-scheme: light dark;*/
 /*  color: rgba(255, 255, 255, 0.87);*/
 /*  background-color: #242424;*/
@@ -56,6 +146,18 @@
 /*button:focus,*/
 /*button:focus-visible {*/
 /*  outline: 4px auto -webkit-focus-ring-color;*/
+/*}*/
+
+/*@media (prefers-color-scheme: light) {*/
+/*    :root {*/
+/*        neutral-white: #ffffff;*/
+/*        neutral-light: #d2d1d6;*/
+/*        neutral-medium: #8784a4;*/
+/*        neutral-dark: #4b486a;*/
+/*        neutral-blue: #0c082b;*/
+/*        orange-primary: #f57261;*/
+/*        orange-dark: #e16151*/
+/*    }*/
 /*}*/
 
 /*@media (prefers-color-scheme: light) {*/
