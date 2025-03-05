@@ -1,11 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
-
-:root {
-    font-family: "Inconsolata", monospace;
-    line-height: 1.5;
-    font-weight: 400;
-}
+@import "tailwindcss";
 
 @theme {
     --color-neutral-white: #ffffff;
@@ -16,6 +10,13 @@
     --color-orange-primary: #f57261;
     --color-orange-dark: #e16151;
 }
+
+:root {
+    font-family: "Inconsolata", monospace;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
 
 body{
     color: var(--color-neutral-white);
