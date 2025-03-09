@@ -1,8 +1,11 @@
 import React, {useState} from 'react'
+// import { useNavigate } from 'react-router-dom';
 
 const InputPage = () => {
     const [userInfo, setUserInfo] = useState({ name: "", email:"", username: "", picture: ""});
     const [isDragging, setIsDragging] = useState(false);
+    // const navigate = useNavigate();
+
 
     const processFile = (file) => {
         if (!file) return;
@@ -55,6 +58,7 @@ const InputPage = () => {
     const handleSubmit= (e)=> {
         e.preventDefault();
         localStorage.setItem("userInfo", JSON.stringify(userInfo));
+        // navigate('/Ticket')
          console.log('UserInfo', userInfo);
         setUserInfo({ name: "", email: "", username: "", picture: "" });
         alert('User Info Saved')
