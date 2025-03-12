@@ -59,15 +59,13 @@ const InputPage = () => {
         e.preventDefault();
         localStorage.setItem("userInfo", JSON.stringify(userInfo));
         navigate('/Ticket')
-        console.log('UserInfo', userInfo);
         setUserInfo({name: "", email: "", username: "", picture: ""});
-        alert('User Info Saved')
     }
 
     return (
         <div className='flex flex-col items-center justify-center'>
-            <div className='mt-8'>
-                <img src='/logo-full.svg' alt='logo'/>
+            <div className='mt-8 '>
+                <img src='/logo-full.svg' alt='logo' className='mx-auto'/>
             </div>
             <div className='my-8 text-center max-w-sm md:max-w-xl'>
                 <h1 className='md:text-4xl text-3xl font-bold  '>Your Journey to Coding Conf 2025 Starts Here!</h1>
