@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
-// import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 const InputPage = () => {
-    const [userInfo, setUserInfo] = useState({ name: "", email:"", username: "", picture: ""});
+    const [userInfo, setUserInfo] = useState({name: "", email: "", username: "", picture: ""});
     const [isDragging, setIsDragging] = useState(false);
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
 
     const processFile = (file) => {
@@ -24,7 +24,7 @@ const InputPage = () => {
         reader.onloadend = () => {
             const base64String = reader.result?.toString();
             localStorage.setItem("userPicture", base64String);
-            setUserInfo({ ...userInfo, picture: base64String });
+            setUserInfo({...userInfo, picture: base64String});
         };
         reader.readAsDataURL(file);
     };
@@ -52,15 +52,15 @@ const InputPage = () => {
 
     const handleChange = (e) => {
         const {name, value} = e.target;
-        setUserInfo((prev) => ({ ...prev, [name]: value }));
+        setUserInfo((prev) => ({...prev, [name]: value}));
     }
 
-    const handleSubmit= (e)=> {
+    const handleSubmit = (e) => {
         e.preventDefault();
         localStorage.setItem("userInfo", JSON.stringify(userInfo));
-        // navigate('/Ticket')
-         console.log('UserInfo', userInfo);
-        setUserInfo({ name: "", email: "", username: "", picture: "" });
+        navigate('/Ticket')
+        console.log('UserInfo', userInfo);
+        setUserInfo({name: "", email: "", username: "", picture: ""});
         alert('User Info Saved')
     }
 
@@ -71,20 +71,22 @@ const InputPage = () => {
             </div>
             <div className='my-8 text-center max-w-sm md:max-w-xl'>
                 <h1 className='md:text-4xl text-3xl font-bold  '>Your Journey to Coding Conf 2025 Starts Here!</h1>
-                <p className='mt-5 text-neutral-light mx-auto w-2/3 md:w-full'>Secure your spot at this year's biggest coding conference.</p>
+                <p className='mt-5 text-neutral-light mx-auto w-2/3 md:w-full'>Secure your spot at this year's biggest
+                    coding conference.</p>
             </div>
             <form onSubmit={handleSubmit}>
                 <div className='w-full md:max-w-sm  space-y-4'>
                     <p className='mb-1'>Upload Avatar</p>
-                    <div  className={`bg-neutral-white/10 rounded-lg flex flex-col items-center py-3 border border-neutral-light/20 border-dashed border-2 
-                            ${isDragging ? "border-orange-primary" : "border-neutral-light/20"}`}  onDragOver={handleDragOver}
-                         onDragLeave={handleDragLeave}
-                         onDrop={handleDrop}>
+                    <div className={`bg-neutral-white/10 rounded-lg flex flex-col items-center py-3 border border-neutral-light/20 border-dashed border-2 ${isDragging ? "border-orange-primary" : "border-neutral-light/20"}`}
+                        onDragOver={handleDragOver}
+                        onDragLeave={handleDragLeave}
+                        onDrop={handleDrop}>
                         <label className='text-neutral-light text-sm'>
                             <div className='bg-neutral-white/20 rounded-lg w-fit p-1 mb-2 mx-auto'>
                                 <img src={userInfo.picture ? userInfo.picture : '/icon-upload.svg'} alt='upload'/>
                             </div>
-                            <input type='file' accept="image/*" className="hidden" name='picture' onChange={handleFileUpload} />
+                            <input type='file' accept="image/*" className="hidden" name='picture'
+                                   onChange={handleFileUpload}/>
                             Drag and drop or click to Upload
                         </label>
                     </div>
@@ -95,18 +97,23 @@ const InputPage = () => {
                     <div className='flex flex-col'>
                         <label className='mb-1'>Full name</label>
                         <input type='text' name='name'
-                               className='bg-neutral-white/10 rounded-md h-8 border border-neutral-light/20 focus:outline-none text-neutral-light pl-3' value={userInfo.name} onChange={handleChange} />
+                               className='bg-neutral-white/10 rounded-md h-8 border border-neutral-light/20 focus:outline-none text-neutral-light pl-3'
+                               value={userInfo.name} onChange={handleChange}/>
                     </div>
                     <div className='flex flex-col'>
                         <label className='mb-1'>Email</label>
-                        <input type='email' name='email' placeholder='example@email.com' className='bg-neutral-white/10 rounded-md h-8 border border-neutral-light/20 focus:outline-none text-neutral-light pl-3' value={userInfo.email} onChange={handleChange}/>
+                        <input type='email' name='email' placeholder='example@email.com'
+                               className='bg-neutral-white/10 rounded-md h-8 border border-neutral-light/20 focus:outline-none text-neutral-light pl-3'
+                               value={userInfo.email} onChange={handleChange}/>
                     </div>
                     <div className='flex flex-col'>
                         <label className='mb-1'>GitHub</label>
                         <input type='text' name='username' placeholder='@username'
-                               className='bg-neutral-white/10 rounded-md h-8 border border-neutral-light/20 focus:outline-none text-neutral-light pl-3' value={userInfo.username} onChange={handleChange} />
+                               className='bg-neutral-white/10 rounded-md h-8 border border-neutral-light/20 focus:outline-none text-neutral-light pl-3'
+                               value={userInfo.username} onChange={handleChange}/>
                     </div>
-                    <button className='w-full py-2 bg-orange-primary text-neutral-black font-bold rounded-lg hover:bg-orange-dark'>
+                    <button
+                        className='w-full py-2 bg-orange-primary text-neutral-black font-bold rounded-lg hover:bg-orange-dark'>
                         Generate my Ticket
                     </button>
 
