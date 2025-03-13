@@ -81,7 +81,7 @@ const InputPage = () => {
                         onDrop={handleDrop}>
                         <label className='text-neutral-light text-sm'>
                             <div className='bg-neutral-white/20 rounded-lg w-fit p-1 mb-2 mx-auto'>
-                                <img src={userInfo.picture ? userInfo.picture : '/icon-upload.svg'} alt='upload'/>
+                                <img src={userInfo.picture ? userInfo.picture : '/icon-upload.svg'} alt='upload' className='w-8'/>
                             </div>
                             <input type='file' accept="image/*" className="hidden" name='picture'
                                    onChange={handleFileUpload}/>
@@ -114,8 +114,6 @@ const InputPage = () => {
                         className='w-full py-2 bg-orange-primary text-neutral-black font-bold rounded-lg hover:bg-orange-dark'>
                         Generate my Ticket
                     </button>
-
-
                 </div>
             </form>
         </div>
