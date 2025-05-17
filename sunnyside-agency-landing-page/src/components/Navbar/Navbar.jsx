@@ -22,7 +22,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center text-center ">
-        <h1 className="uppercase text-white text-5xl font-mono font-black  pt-26 ">We are Creatives</h1>
+        <h1 className="uppercase text-white text-5xl font-sans font-black  pt-26 ">We are Creatives</h1>
         <Image src="/icon-arrow-down.svg" alt="arrow" height={30} width={30} className="pt-26 mx-auto" />
       </div>
     </div>

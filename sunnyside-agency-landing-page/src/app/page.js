@@ -1,9 +1,11 @@
-import { NavBar } from '@/components';
+import { NavBar, Purpose, Testimonials } from '@/components';
 
 export default function Home() {
   return (
     <div>
       <NavBar />
+      <Purpose />
+      <Testimonials />
     </div>
   );
 }
