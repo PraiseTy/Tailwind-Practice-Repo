@@ -4,6 +4,9 @@
   --background: #fffdfa;
   --foreground: #5d5f79;
   --soft-red: #f15e50;
+  --soft-orange: #e9ab53;
+  --dark-blue: #00001a;
+  --grayish-blue: #c5c6ce;
 }
 
 @theme inline {
@@ -12,6 +15,9 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-soft-red: var(--soft-red);
+  --color-soft-orange: var(--soft-orange);
+  --color-dark-blue: var(--dark-blue);
+  --color-grayish-blue: var(--grayish-blue);
 }
 
 @media (prefers-color-scheme: dark) {
