@@ -9,6 +9,6 @@ export const TrendingData = [
   },
   {
     title: 'Is VC Funding Drying Up',
-    text: 'Private funding by VC firms is down 50% YOY. We take a look ar what means.'
+    text: 'Private funding by VC firms is down 50% YOY. We take a look at what means.'
   }
 ];
